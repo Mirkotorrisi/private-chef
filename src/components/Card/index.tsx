@@ -1,23 +1,31 @@
-import React from "react";
+import React, { ReactNode } from "react";
+import "./index.scss";
 
 type Props = {
+  tag: string;
   title: string;
-  img: string;
+  children: ReactNode;
   paragraph: string;
   url: string;
 };
-const Card = ({ title, img, paragraph, url }: Props) => {
+const Card = ({ children, tag, title, paragraph, url }: Props) => {
   return (
-    <div className="relative group max-w-lg overflow-hidden aspect-video flex flex-col gap-8 pt-2 px-4 rounded-lg bg-blue-400">
-      <img
-        src={img}
-        className="w-full h-full absolute top-0 left-0 object-cover group-hover:scale-125 ease-in duration-300"
-      />
-      <div className="absolute top-0 left-0 w-full h-full z-10 bg-gradient-to-t from-black to-transparent "></div>
-      <h3 className="text-6xl text-white font-bold z-20">{title}</h3>
-      <div className="z-30 pb-2 flex flex-col gap-4 mt-auto translate-y-full group-hover:translate-y-0 ease-in duration-300">
-        <p className="text-lg text-white">{paragraph}</p>
-        <button className="px-4 py-2 rounded-lg  bg-amber-300">Click me</button>
+    <div className="card aspect-square relative group overflow-hidden flex flex-col justify-end p-6 pt-10 lg:p-8">
+      {children}
+      <div className="absolute top-0 left-0 w-full h-full z-10 grey-gradient"></div>
+      <span className="z-20 text-white bg-stone-500 rounded-sm px-2 py-1 uppercase mb-5 text-sm font-semibold leading-5 mr-auto">
+        {tag}
+      </span>
+      <h4 className=" text-white z-20 mb-2 lg:mb-4">{title}</h4>
+      <div className="z-30 flex flex-col gap-4 ">
+        <div className="ease-out duration-300 mb-[-100%] group-hover:mb-0 space-y-6 pb-4 ">
+          <p className="text-lg text-white opacity-0 ease-in duration-300 group-hover:opacity-100">
+            {paragraph}
+          </p>
+          <button className="px-8 py-4 rounded  bg-white">
+            Penota la tua esperienza
+          </button>
+        </div>
       </div>
     </div>
   );

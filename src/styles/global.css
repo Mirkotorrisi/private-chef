@@ -1,3 +1,87 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@layer utilities {
+  * {
+    font-family: Raleway;
+  }
+  main {
+    @apply overflow-hidden;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: Lora;
+  }
+  h1 {
+    /* Heading/1 */
+    @apply text-left text-4xl md:text-6xl xl:text-7xl font-medium lg:leading-10 tracking-normal xl:leading-[72px] xl:tracking-[0px]  2xl:leading-[86px];
+  }
+  h2 {
+    /* Heading/2 */
+    @apply text-3xl lg:text-5xl 2xl:text-6xl font-medium leading-9 lg:leading-[58px] 2xl:leading-[72px] tracking-normal text-left;
+  }
+  h4 {
+    @apply text-xl font-medium leading-7 tracking-normal text-left lg:text-3xl lg:leading-9 xl:text-4xl xl:leading-10;
+  }
+
+  p {
+    /* Body/1 */
+    @apply text-lg font-normal leading-7 tracking-normal text-left lg:text-xl 2xl:text-2xl 2xl:leading-8 text-stone-700;
+  }
+
+  .bold {
+    /* /BodyBold/1 */
+    @apply text-center text-neutral-800 text-lg lg:text-xl not-italic font-bold leading-7;
+  }
+  .bold-2 {
+    /* /BodyBold/2 */
+    @apply font-bold leading-6 lg:leading-7 tracking-normal text-left text-base lg:text-lg 2xl:text-xl;
+  }
+
+  .body-2 {
+    /* Body/2 */
+    @apply text-base font-normal leading-6 tracking-normal text-left lg:text-lg 2xl:text-xl;
+  }
+
+  .body-3 {
+    /* Body/3 */
+    @apply text-sm font-normal leading-5 tracking-normal text-left lg:text-base lg:leading-6 2xl:text-lg 2xl:leading-6;
+  }
+}
+
+@layer components {
+  .button-solid {
+    @apply lg:text-lg px-4 py-2 lg:px-6 lg:py-3 flex justify-center items-center gap-2 rounded-lg bg-orange-500 hover:bg-orange-600 ease-in duration-300 text-white;
+  }
+
+  .button-ghost {
+    @apply button-solid bg-transparent text-orange-500 font-semibold leading-6 lg:text-lg lg:leading-7;
+  }
+
+  .button-ghost:hover {
+    @apply bg-orange-100;
+  }
+
+  .hero-image {
+    @apply max-w-[624px] lg:max-w-[1120px];
+  }
+
+  .button-prev,
+  .button-next {
+    @apply rounded-full ease-in duration-300;
+  }
+  .button-prev:hover,
+  .button-next:hover {
+    @apply bg-white;
+  }
+  .button-prev:hover svg path,
+  .button-next:hover svg path {
+    fill: black;
+  }
+}

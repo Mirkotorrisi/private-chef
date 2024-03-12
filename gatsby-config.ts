@@ -22,11 +22,12 @@ const config: GatsbyConfig = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-postcss",
     "gatsby-plugin-sitemap",
+    `gatsby-plugin-sass`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: "./src/images/",
+        path: "./src/static/img/",
       },
       __key: "images",
     },
@@ -37,6 +38,14 @@ const config: GatsbyConfig = {
         languages: [`en`, `it`],
         defaultLanguage: `it`,
         redirect: true,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /svg/,
+        },
       },
     },
   ],
