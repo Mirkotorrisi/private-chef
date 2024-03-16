@@ -22,9 +22,7 @@ const Card = ({ children, tag, title, paragraph, url }: Props) => {
           <p className="text-lg text-white opacity-0 ease-in duration-300 group-hover:opacity-100">
             {paragraph}
           </p>
-          <button className="px-8 py-4 rounded  bg-white">
-            Penota la tua esperienza
-          </button>
+          <button className="button-solid">Penota la tua esperienza</button>
         </div>
       </div>
     </div>

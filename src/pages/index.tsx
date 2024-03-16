@@ -7,13 +7,13 @@ import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Accordion from "../components/Accordion";
 import Card from "../components/Card";
+import Footer from "../components/Footer";
 import Hero from "../components/Hero";
+import Stepper from "../components/Stepper";
+import useParallax from "../hooks/useParallax";
 import NextBtn from "../static/svg/button-next.svg";
 import PrevBtn from "../static/svg/button-prev.svg";
 import Cutlery from "../static/svg/cutlery.svg";
-import Step1 from "../static/svg/step-1.svg";
-import Step2 from "../static/svg/step-2.svg";
-import Step3 from "../static/svg/step-3.svg";
 import "./index.scss";
 
 const chooseUs = [
@@ -47,8 +47,9 @@ const faq = [
   },
 ];
 const IndexPage: React.FC<PageProps> = ({ location }) => {
+  const mainRef = useParallax();
   return (
-    <main className="w-full min-h-screen">
+    <main className="w-full min-h-screen" ref={mainRef}>
       <Hero />
       <section className="p-4 md:p-6 lg:p-10 xl:p-20 py-8 md:py-10 lg:py-20 flex w-full flex-col md:flex-row items-center">
         <div className="space-y-2 max-w-[600px]">
@@ -66,13 +67,18 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           alt="cutting some prezzemolo"
         />
       </section>
-      <div className="w-full relative h-[160px] md:h-[330px] lg:h-[440px] xl:h-[550px] 2xl:h-[660px]">
+      <div className="w-full relative h-[160px] md:h-[330px] lg:h-[440px] xl:h-[550px] 2xl:h-[660px]  overflow-hidden">
         <div className="absolute inset-0 z-20 size-full bg-gradient-to-t from-white via-transparent to-white" />
-        <StaticImage
-          src="../static/img/services-2.jpeg"
-          className="size-full absolute inset-0"
-          alt="something"
-        />
+        <div
+          className="absolute size-full inset-0 parallax-bg"
+          data-speed=".1275"
+        >
+          <StaticImage
+            src="../static/img/services-2.jpeg"
+            className="absolute size-[150%]"
+            alt="something"
+          />
+        </div>
       </div>
       <section className="w-full grid md:grid-cols-2 gap-4 md:gap-6 lg:gap-10 px-4 md:px-6 py-8 lg:p-10 xl:p-20">
         <h2 className="mb-4 md:mb-0">Il Gusto e le sue sfumature</h2>
@@ -188,68 +194,34 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             l'opportunità di rendere memorabile ogni momento con sapori unici e
             servizi esclusivi.
           </p>
-          <button className="px-8 py-4 rounded bg-white !mt-8">
+          <button className="button-solid !mt-8">
             Penota la tua esperienza
           </button>
         </div>
-        <div className="flex flex-col pt-8 md:pt-0">
-          <div className="flex flex-1 gap-6">
-            <div className="flex flex-col items-center">
-              <Step1 className="size-10 lg:size-20 xl:size-40" />
-              <div className="w-[2px] lg:w-[4px] h-full bg-white" />
-            </div>
-            <div className="space-y-2 mb-4">
-              <h4 className="text-white ">Consultazione Iniziale</h4>
-              <p className="body-3 text-white">
-                Condividi le tue preferenze e desideri. Insieme, progetteremo il
-                tuo evento perfetto.
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-1 gap-6">
-            <div className="flex flex-col items-center">
-              <Step2 className="size-10 lg:size-20 xl:size-40" />
-              <div className="w-[2px] lg:w-[4px] h-full bg-white" />
-            </div>
-            <div className="space-y-2 mb-4">
-              <h4 className="text-white ">Scelta del Menu</h4>
-              <p className="body-3 text-white">
-                Condividi le tue preferenze e desideri. Insieme, progetteremo il
-                tuo evento perfetto.{" "}
-              </p>
-            </div>
-          </div>
-          <div className="flex flex-1 gap-6">
-            <div className="flex flex-col items-center">
-              <Step3 className="size-10 lg:size-20 xl:size-40" />
-              <div className="w-[2px] lg:w-[4px] h-full " />
-            </div>{" "}
-            <div className="space-y-2 ">
-              <h4 className="text-white ">Scelta del Menu</h4>
-              <p className="body-3 text-white">
-                Condividi le tue preferenze e desideri. Insieme, progetteremo il
-                tuo evento perfetto.{" "}
-              </p>
-            </div>
-          </div>
-        </div>
+        <Stepper />
       </section>
       <section className="pb-8 px-4 md:pb-10 md:px-6 lg:pb-20 lg:px-10 xl:px-20  half-bg grid md:grid-cols-3 gap-8 lg:gap-10 xl:gap-20">
-        <StaticImage
-          src="../static/img/services-8.jpeg"
-          className="aspect-[287/384] object-cover md:mt-8 lg:mt-10 xl:mt-20"
-          alt=""
-        />
-        <StaticImage
-          src="../static/img/services-7.jpeg"
-          className="aspect-[287/384] object-cover hidden md:block"
-          alt=""
-        />
-        <StaticImage
-          src="../static/img/services-6.jpeg"
-          className="aspect-[287/384] object-cover hidden md:block md:mt-8 lg:mt-10 xl:mt-20"
-          alt=""
-        />
+        <div className="parallax-bg" data-speed=".03">
+          <StaticImage
+            src="../static/img/services-8.jpeg"
+            className="aspect-[287/384] object-cover md:mt-8 lg:mt-10 xl:mt-20 parallax-bg"
+            alt=""
+          />
+        </div>
+        <div className="parallax-bg" data-speed="-.03">
+          <StaticImage
+            src="../static/img/services-7.jpeg"
+            className="aspect-[287/384] object-cover hidden md:block parallax-bg"
+            alt=""
+          />
+        </div>
+        <div className="parallax-bg" data-speed=".03">
+          <StaticImage
+            src="../static/img/services-6.jpeg"
+            className="aspect-[287/384] object-cover hidden md:block md:mt-8 lg:mt-10 xl:mt-20 parallax-bg"
+            alt=""
+          />
+        </div>
       </section>
       <section className="bg-stone-100 py-8 px-4 md:py-10 md:px-6 lg:py-20 lg:px-10 xl:p-20 grid md:grid-cols-2 md:gap-12 lg:gap-20 2xl:gap-40">
         <div className="space-y-2">
@@ -267,6 +239,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
 
         <Accordion items={faq} />
       </section>
+      <Footer />
     </main>
   );
 };
