@@ -62,17 +62,19 @@
 
 @layer components {
   .button-solid {
-    @apply px-8 py-4 rounded bg-white duration-300 ease-out border border-white;
+    @apply px-8 py-4 rounded bg-white duration-300 ease-out border border-white font-semibold;
   }
 
   .button-solid:hover {
-    @apply bg-stone-900 text-white;
+    @apply bg-[#FFFFFF1A] backdrop-blur-xl	 text-white;
   }
 
-  .button-ghost {
+  .button-inverted {
+    @apply px-8 py-4 rounded duration-300 ease-out border border-white font-semibold bg-stone-900 text-white;
   }
 
-  .button-ghost:hover {
+  .button-inverted:hover {
+    @apply bg-white text-stone-900 border-stone-900;
   }
 
   .button-prev,

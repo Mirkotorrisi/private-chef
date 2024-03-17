@@ -9,6 +9,7 @@ import Accordion from "../components/Accordion";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
+import Navbar from "../components/Navbar";
 import Stepper from "../components/Stepper";
 import useParallax from "../hooks/useParallax";
 import NextBtn from "../static/svg/button-next.svg";
@@ -50,8 +51,9 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
   const mainRef = useParallax();
   return (
     <main className="w-full min-h-screen" ref={mainRef}>
+      <Navbar />
       <Hero />
-      <section className="p-4 md:p-6 lg:p-10 xl:p-20 py-8 md:py-10 lg:py-20 flex w-full flex-col md:flex-row items-center">
+      <section className="p-4 md:p-6 lg:p-10 xl:p-20 py-8 md:py-10 lg:py-20 w-full grid md:grid-cols-2 items-center">
         <div className="space-y-2 max-w-[600px]">
           <h2>Il tuo Chef Privato</h2>
           <p>
@@ -62,7 +64,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           </p>
         </div>
         <StaticImage
-          src="../static/img/services-2.jpeg"
+          src="../static/img/services-10.png"
           className=""
           alt="cutting some prezzemolo"
         />
