@@ -76,7 +76,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           data-speed=".1275"
         >
           <StaticImage
-            src="../static/img/services-2.jpeg"
+            src="../static/img/services-2-2.jpg"
             className="absolute size-[150%]"
             alt="something"
           />
@@ -116,7 +116,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
           >
             <StaticImage
               alt="random"
-              src={"../static/img/services-5.jpeg"}
+              src={"../static/img/services-3.jpg"}
               className="w-full h-full absolute top-0 left-0 object-cover group-hover:scale-125 ease-in duration-300"
             />
           </Card>
@@ -165,7 +165,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
         >
           <SwiperSlide>
             <StaticImage
-              src="../static/img/services-5.jpeg"
+              src="../static/img/services-5.jpg"
               alt={""}
               className="size-full aspect-video"
             />

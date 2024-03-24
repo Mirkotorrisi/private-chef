@@ -7,11 +7,9 @@ const Hero = () => {
   return (
     <header className="p-4 md:p-6 lg:p-10 xl:p-20 flex w-full relative overflow-hidden h-[812px] md:h-[1024px] lg:h-[668px] 2xl:h-[819px]">
       <StaticImage
-        src="../../static/img/hero-services.jpeg"
+        src="../../static/img/hero-services-2.jpg"
         alt="hands of a chef"
-        className="
-        z-0
-        absolute inset-0 size-full"
+        className="z-0 absolute inset-0 size-full object-cover"
       />
 
       <div className="w-full h-full z-10 bg-black opacity-75 absolute inset-0" />
@@ -26,7 +24,7 @@ const Hero = () => {
             gastronomico.
           </p>
         </div>
-        <div className="relative flex place-content-center size-[160px] hover:cursor-pointer">
+        <div className="relative place-content-center size-[160px] hover:cursor-pointer hidden md:flex">
           <ScrollDownBtn className="absolute inset-0 z-20 size-[160px] animate-spin hover:animate-spinslow" />
           <ScrollDownArrow className="absolute inset-0 z-10 size-[160px] " />
         </div>
