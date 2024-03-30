@@ -1,4 +1,5 @@
 import { StaticImage } from "gatsby-plugin-image";
+import { FormattedMessage } from "gatsby-plugin-intl";
 import React from "react";
 import ScrollDownArrow from "../../static/svg/scroll-down-arrow.svg";
 import ScrollDownBtn from "../../static/svg/scroll-down.svg";
@@ -15,13 +16,11 @@ const Hero = () => {
       <div className="w-full h-full z-10 bg-black opacity-75 absolute inset-0" />
       <div className="flex flex-col lg:flex-row justify-between w-full mg:items-end">
         <div className=" text-white flex flex-col gap-6 mt-auto z-20 max-w-[420px] lg:max-w-[600px] 2xl:max-w-[800px]">
-          <h1>Sapori Gourmet, Comfort di Casa</h1>
+          <h1>
+            <FormattedMessage id="services.hero-h" />
+          </h1>
           <p className="text-[#EDEDED]">
-            Lasciati guidare dalla nostra expertise culinaria e trasforma la tua
-            prossima cena in un evento memorabile che supera ogni aspettativa.
-            Da incontri intimi a celebrazioni grandiose, ogni esperienza è
-            curata nei minimi dettagli per garantirti momenti di puro piacere
-            gastronomico.
+            <FormattedMessage id="services.hero-p" />
           </p>
         </div>
         <div className="mt-8 md:mt-auto relative place-content-center size-[120px] md:size-[160px] hover:cursor-pointer flex">

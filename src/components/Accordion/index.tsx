@@ -1,3 +1,4 @@
+import { FormattedMessage } from "gatsby-plugin-intl";
 import React, { SyntheticEvent } from "react";
 import Chevron from "../../static/svg/chevron.svg";
 import "./index.scss";
@@ -24,11 +25,11 @@ const Accordion = ({ items }: Props) => (
         onToggle={closeDetails}
       >
         <summary className="bold-2 flex items-center justify-between w-full pb-2">
-          {item.title}
+          <FormattedMessage id={item.title} />
           <Chevron className="w-4 h-2 duration-300 ease-in chevron" />
         </summary>
 
-        {item.content}
+        <FormattedMessage id={item.content} />
       </details>
     ))}
   </div>

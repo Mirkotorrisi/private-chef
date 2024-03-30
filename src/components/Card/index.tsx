@@ -1,3 +1,4 @@
+import { FormattedMessage } from "gatsby-plugin-intl";
 import React, { ReactNode } from "react";
 import "./index.scss";
 
@@ -14,15 +15,19 @@ const Card = ({ children, tag, title, paragraph, url }: Props) => {
       {children}
       <div className="absolute top-0 left-0 w-full h-full z-10 grey-gradient"></div>
       <span className="z-20 text-white bg-stone-500 rounded-sm px-2 py-1 uppercase mb-2 md:mb-5 text-sm font-semibold leading-5 mr-auto">
-        {tag}
+        <FormattedMessage id={tag} />
       </span>
-      <h4 className=" text-white z-20 mb-2 lg:mb-4">{title}</h4>
+      <h4 className=" text-white z-20 mb-2 lg:mb-4">
+        <FormattedMessage id={title} />
+      </h4>
       <div className="z-30 flex flex-col gap-4">
         <div className="ease-out duration-300 md:mb-[-100%] group-hover:mb-0 space-y-3 md:space-y-6 md:pb-4">
           <p className="text-lg body-3 text-white md:opacity-0 ease-in duration-300 group-hover:opacity-100">
-            {paragraph}
+            <FormattedMessage id={paragraph} />
           </p>
-          <button className="button-solid">Penota la tua esperienza</button>
+          <button className="button-solid">
+            <FormattedMessage id="card-cta" />
+          </button>
         </div>
       </div>
     </div>

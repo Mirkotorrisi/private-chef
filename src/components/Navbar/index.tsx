@@ -1,8 +1,10 @@
+import { FormattedMessage } from "gatsby-plugin-intl";
 import React from "react";
 import useIsOnTop from "../../hooks/useIsOnTop";
 import Logo from "../../static/svg/bg-footer-logo.svg";
 import Envelope from "../../static/svg/envelope.svg";
 import Hamburger from "../../static/svg/hamburger.svg";
+import Language from "../Language";
 
 const Navbar = () => {
   const isOnTop = useIsOnTop();
@@ -35,11 +37,12 @@ const Navbar = () => {
         <div
           className={`divide-x-2 ${classes.language} font-semibold hidden lg:block`}
         >
-          <span className="px-1 hover:cursor-pointer">IT</span>
-          <span className="px-1 hover:cursor-pointer">EN</span>
+          <Language />
         </div>
         <button className={`${classes.cta} px-6 lg:px-8`}>
-          <span className="hidden lg:block">Contattaci</span>
+          <span className="hidden lg:block">
+            <FormattedMessage id="contact-cta" />
+          </span>
           <Envelope className={`${classes.envelope} lg:hidden`} />
         </button>
       </div>
