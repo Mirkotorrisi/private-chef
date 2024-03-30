@@ -40,10 +40,10 @@ const Footer = () => {
         <a href="" className="body-3 text-stone-500 underline">
           Privacy Policy
         </a>
-        <div className="mt-4 md:mt-0 md:ml-auto flex gap-8">
-          <FbLogo className="" />
-          <FbLogo className="" />
-          <FbLogo className="" />
+        <div className="mt-3 md:mt-0 md:ml-auto flex gap-8">
+          <FbLogo className="size-5 md:size-6" />
+          <FbLogo className="size-5 md:size-6" />
+          <FbLogo className="size-5 md:size-6" />
         </div>
       </div>
     </footer>

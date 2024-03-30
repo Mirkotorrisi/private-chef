@@ -16,7 +16,7 @@ const closeDetails = (e: SyntheticEvent<HTMLDetailsElement, Event>) => {
   }
 };
 const Accordion = ({ items }: Props) => (
-  <div className=" space-y-8">
+  <div className="mt-8 md:mt-0 space-y-8">
     {items.map((item) => (
       <details
         className="border-b border-stone-200 py-2 body-3 "

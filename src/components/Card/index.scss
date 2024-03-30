@@ -7,3 +7,9 @@
     background: linear-gradient(180deg, rgba(28, 25, 23, 0.5) 0%, #1c1917 100%);
   }
 }
+
+@media screen and (max-width: 765px) {
+  .grey-gradient {
+    background: linear-gradient(180deg, rgba(28, 25, 23, 0.5) 0%, #1c1917 100%);
+  }
+}

@@ -15,7 +15,8 @@ const useParallax = () => {
           scrub: true,
         },
         y: (i, target) =>
-          -ScrollTrigger.maxScroll(window) * target.dataset.speed,
+          -(ScrollTrigger.maxScroll(window) * target.dataset.speed * 0.15) +
+          "%",
         ease: "none",
       });
     },

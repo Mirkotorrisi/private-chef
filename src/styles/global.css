@@ -32,7 +32,7 @@
 
   p {
     /* Body/1 */
-    @apply text-lg font-normal leading-7 tracking-normal text-left lg:text-xl 2xl:text-2xl 2xl:leading-8 text-stone-700;
+    @apply text-lg font-light leading-7 tracking-normal text-left lg:text-xl 2xl:text-2xl 2xl:leading-8 text-stone-700;
   }
 
   .bold {
@@ -62,7 +62,7 @@
 
 @layer components {
   .button-solid {
-    @apply px-8 py-4 rounded bg-white duration-300 ease-out border border-white font-semibold;
+    @apply px-6 py-3 md:px-8 md:py-4 rounded bg-white duration-300 ease-out border border-white font-semibold;
   }
 
   .button-solid:hover {
@@ -70,7 +70,7 @@
   }
 
   .button-inverted {
-    @apply px-8 py-4 rounded duration-300 ease-out border border-white font-semibold bg-stone-900 text-white;
+    @apply button-solid bg-stone-900 text-white;
   }
 
   .button-inverted:hover {

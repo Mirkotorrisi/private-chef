@@ -13,7 +13,7 @@ const Hero = () => {
       />
 
       <div className="w-full h-full z-10 bg-black opacity-75 absolute inset-0" />
-      <div className="flex justify-between w-full items-end">
+      <div className="flex flex-col lg:flex-row justify-between w-full mg:items-end">
         <div className=" text-white flex flex-col gap-6 mt-auto z-20 max-w-[420px] lg:max-w-[600px] 2xl:max-w-[800px]">
           <h1>Sapori Gourmet, Comfort di Casa</h1>
           <p className="text-[#EDEDED]">
@@ -24,9 +24,9 @@ const Hero = () => {
             gastronomico.
           </p>
         </div>
-        <div className="relative place-content-center size-[160px] hover:cursor-pointer hidden md:flex">
-          <ScrollDownBtn className="absolute inset-0 z-20 size-[160px] animate-spin hover:animate-spinslow" />
-          <ScrollDownArrow className="absolute inset-0 z-10 size-[160px] " />
+        <div className="mt-8 md:mt-auto relative place-content-center size-[120px] md:size-[160px] hover:cursor-pointer flex">
+          <ScrollDownBtn className="absolute inset-0 z-20 size-[120px] md:size-[160px] animate-spin hover:animate-spinslow" />
+          <ScrollDownArrow className="absolute inset-0 z-10 size-[120px] md:size-[160px] " />
         </div>
       </div>
     </header>
