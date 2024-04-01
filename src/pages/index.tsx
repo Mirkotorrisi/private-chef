@@ -55,7 +55,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
         >
           <StaticImage
             src="../static/img/services-2-2.jpg"
-            className="absolute size-[150%]"
+            className="!absolute size-[150%]"
             alt="something"
           />
         </div>
@@ -79,7 +79,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             <StaticImage
               alt="random"
               src={"../static/img/services-3.jpg"}
-              className="w-full h-full absolute top-0 left-0 object-cover group-hover:scale-125 ease-in duration-300"
+              className="w-full h-full !absolute top-0 left-0 object-cover group-hover:scale-125 ease-in duration-300"
             />
           </Card>
         </div>
@@ -93,7 +93,7 @@ const IndexPage: React.FC<PageProps> = ({ location }) => {
             <StaticImage
               alt="random"
               src={"../static/img/services-4.jpeg"}
-              className="w-full h-full absolute top-0 left-0 object-cover group-hover:scale-125 ease-in duration-300"
+              className="w-full h-full !absolute top-0 left-0 object-cover group-hover:scale-125 ease-in duration-300"
             />
           </Card>
         </div>

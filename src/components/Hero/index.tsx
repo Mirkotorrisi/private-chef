@@ -10,7 +10,7 @@ const Hero = () => {
       <StaticImage
         src="../../static/img/hero-services-2.jpg"
         alt="hands of a chef"
-        className="z-0 absolute inset-0 size-full object-cover"
+        className="z-0 !absolute inset-0 size-full object-cover"
       />
 
       <div className="w-full h-full z-10 bg-black opacity-75 absolute inset-0" />
